@@ -2,8 +2,8 @@ public class Rettangolo {
     private int altezza, base;
 
     public Rettangolo(int altezza, int base) {
-        this.altezza = altezza;
-        this.base = base;
+        setBase(base);
+        setAltezza(altezza);
     }
 
     public int getAltezza() {
@@ -15,11 +15,21 @@ public class Rettangolo {
     }
 
     public void setAltezza(int altezza) {
-        this.altezza = altezza;
+        if (altezza<=0){
+            this.altezza=1;
+        } else {
+            this.altezza = altezza;
+        }
+
     }
 
     public void setBase(int base) {
-        this.base = base;
+        if (base<=0){
+            this.base=1;
+        } else {
+            this.base = base;
+        }
+
     }
 
     public int area (){
